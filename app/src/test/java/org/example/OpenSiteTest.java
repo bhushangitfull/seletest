@@ -20,9 +20,10 @@ public class OpenSiteTest {
     }
 
     @Test
-    public void testOpenSite() {
+    public void testOpenSite() throws InterruptedException {
         driver.get("https://jp-anime-learner.vercel.app/");
         System.out.println("Page Title: " + driver.getTitle());
+        Thread.sleep(5000);
         Assert.assertNotNull(driver.getTitle());
         System.out.println("✅ Site opened successfully!");
         
